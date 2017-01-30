@@ -54,6 +54,8 @@ if (basename($stylesheet = get_option('template')) !== 'templates') {
     exit();
 }
 
+load_theme_textdomain('sage', get_template_directory() . '/languages');
+
 if (function_exists('acf_add_options_sub_page')) {
     acf_add_options_sub_page(array(
         'page_title' => 'Header Einstellungen',

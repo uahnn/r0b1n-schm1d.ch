@@ -33,5 +33,6 @@
         </div>
 
     </div>
+    {{get_locale()}}
 
 </footer>
