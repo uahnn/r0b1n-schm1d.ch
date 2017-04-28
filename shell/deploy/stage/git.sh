@@ -2,7 +2,7 @@
 
 echo "deploy on cyon server"
 
-ssh mugetld@server54.cyon.ch "
+ssh mugetld@s018.cyon.net "
     echo 'update git'
     cd public_html/robinschmid.ch
 	git pull

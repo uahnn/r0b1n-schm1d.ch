@@ -2,11 +2,11 @@
 
 echo "removing wordpress..."
 
-ssh mugetld@server54.cyon.ch "
+ssh mugetld@s018.cyon.net "
     cd public_html/robinschmid.ch/web
     rm -rf wp
     echo 'done'
 "
 echo "deploy wordpress..."
-scp -r ./web/wp mugetld@server54.cyon.ch:public_html/robinschmid.ch/web
+scp -r ./web/wp mugetld@s018.cyon.net:public_html/robinschmid.ch/web
 echo "wordpress deployment done"

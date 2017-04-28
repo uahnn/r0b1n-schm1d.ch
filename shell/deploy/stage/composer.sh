@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ssh mugetld@server54.cyon.ch "
+ssh mugetld@s018.cyon.net "
     cd public_html/robinschmid.ch
     echo 'removing vendor folder...'
 	rm -rf vendor
@@ -11,8 +11,8 @@ ssh mugetld@server54.cyon.ch "
 
 echo "deploy composer dependencies on cyon server"
 echo "deploy vendor folder..."
-scp -r ./vendor mugetld@server54.cyon.ch:public_html/robinschmid.ch
+scp -r ./vendor mugetld@s018.cyon.net:public_html/robinschmid.ch
 echo "vendor deployment done"
 echo "deploy wordpress plugins"
-scp -r ./web/app/plugins mugetld@server54.cyon.ch:public_html/robinschmid.ch/web/app
+scp -r ./web/app/plugins mugetld@s018.cyon.net:public_html/robinschmid.ch/web/app
 echo "wordpress plugins deployment done"

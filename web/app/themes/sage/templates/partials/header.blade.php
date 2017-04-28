@@ -11,7 +11,10 @@
     </div>
 </div>
 <header class="banner" {!! $background_image or "" !!}>
-      <button type="button" id="navigation-toggle" class="button-toggle collapsed-js"
+     @if(get_field('header_message', 'options') && is_front_page())
+    <div class="banner__text">{{ get_field('header_message', 'options') }}</div>
+        @endif
+    <button type="button" id="navigation-toggle" class="button-toggle collapsed-js"
             data-target="#navbar-collapse-primary">
         <span class="sr-only">Toggle navigation</span>
         <span class="button-toggle__bar button-toggle__bar--top"></span>

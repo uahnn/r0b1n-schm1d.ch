@@ -7,6 +7,31 @@
 }
 
 .banner {
+  position: relative;
+
+  &__text {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    max-width: 80%;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-family: $font-family-serif;
+    background-color: $notwhite;
+    color: $color-primary;
+    animation: fadeIn 3s;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 1.3rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+      bottom: 10%;
+    }
+  }
+
+
   .button-toggle {
     position: fixed;
     top: 10px;
@@ -21,7 +46,7 @@
 }
 
 .banner {
-  height: 250px;
+  height: 70vw;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -112,7 +137,7 @@
       }
     }
 
-    &.current-menu-item {
+    &.current-menu-item, &.current_page_parent {
       a {
         color: $color-nav-prim-link-active;
         background-color: $color-primary;
@@ -135,13 +160,13 @@
     height: auto;
   }
 
-  .banner {
-    height: 350px;
-  }
-
   .hide-overlay-js {
     opacity: 1;
     transition: none;
+
+    .nav-prim {
+      height: 0;
+    }
   }
 
   .nav-prim {
@@ -206,11 +231,28 @@
   }
 }
 
-/*==================
-       DESKTOP
-==================*/
-@include media-breakpoint-up(lg) {
+@media(orientation: landscape) {
   .banner {
-    height: 450px;
+    height: 50vw;
+    max-height: 70vh;
+    background-position: center 25%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .banner {
+      background-position: center 15%;
+    }
+  }
+}
+
+@keyframes fadeIn {
+
+  0%, 30% {
+      opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

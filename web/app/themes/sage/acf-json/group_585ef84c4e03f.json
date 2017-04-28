@@ -25,6 +25,25 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_59035350bf0ea",
+            "label": "Header Message",
+            "name": "header_message",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -32,7 +51,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "theme-general-settings"
+                "value": "header-settings"
             }
         ]
     ],
@@ -44,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482619018
+    "modified": 1493390182
 }

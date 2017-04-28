@@ -1,11 +1,14 @@
 .content-info {
   background-color: $color-background;
   min-height: 10rem;
-  padding: 1rem 0;
+  padding: 20px 0 50px;
 }
 
 .address {
+  color: $color-footer-text;
   text-align: center;
+  font-size: 0.9em;
+  padding: 1rem;
 
   p {
     margin: 0;
@@ -71,6 +74,7 @@
 
   .socialmedia {
     padding: 1rem;
+
     &__el {
       font-size: 1.2em;
     }

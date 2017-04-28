@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ssh mugetld@server54.cyon.ch "
+ssh mugetld@s018.cyon.net "
     cd public_html/robinschmid.ch/web/app
     echo 'removing uploads folder...'
 	rm -rf uploads
@@ -8,5 +8,5 @@ ssh mugetld@server54.cyon.ch "
 "
 
 echo "deploy uploads on cyon server"
-scp -r ./web/app/uploads mugetld@server54.cyon.ch:public_html/robinschmid.ch/web/app
+scp -r ./web/app/uploads mugetld@s018.cyon.net:public_html/robinschmid.ch/web/app
 echo "uploads deployment done"
